@@ -237,6 +237,15 @@ function wp_default_scripts( &$scripts ) {
 	$scripts->add( 'jquery-ui-tooltip', "/wp-includes/js/jquery/ui/tooltip$dev_suffix.js", array( 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-position' ), '1.11.4', 1 );
 	$scripts->add( 'jquery-ui-widget', "/wp-includes/js/jquery/ui/widget$dev_suffix.js", array('jquery'), '1.11.4', 1 );
 
+    //Наши скрипты
+    $scripts->add( 'modernizr', "/wp-includes/js/js/vendor/modernizr.js", array());
+    $scripts->add( 'jquery', "http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", array());
+    $scripts->add( 'jquery', "/wp-includes/js/js/vendor/jquery.js", array());
+    $scripts->add( 'jquery.easing.1.3', "/wp-includes/js/js/vendor/jquery.easing.1.3.js", array());
+    $scripts->add( 'bootstrap', "/wp-includes/js/js/bootstrap.min.js", array());
+    $scripts->add( 'jquery.flexisel', "/wp-includes/js/js/vendor/jquery.flexisel.js", array());
+    $scripts->add( 'wow-min', "/wp-includes/js/js/vendor/wow.min.js", array());
+//    $scripts->add( 'jquery', "/wp-includes/js/js/", array());
 	// Strings for 'jquery-ui-autocomplete' live region messages
 	did_action( 'init' ) && $scripts->localize( 'jquery-ui-autocomplete', 'uiAutocompleteL10n', array(
 		'noResults' => __( 'No results found.' ),

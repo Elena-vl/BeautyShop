@@ -71,8 +71,13 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 	 */
 	function storefront_cart_link() {
 		?>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
-				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );?></span>
+			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">Корзина
+<!--				--><?php //echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?>
+<!--                <span class="count">--><?php //echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?>
+                <span class="woocommerce-Price-amount amount count">
+                    <?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );?>
+                    <?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?>
+                </span>
 			</a>
 		<?php
 	}
@@ -88,9 +93,9 @@ if ( ! function_exists( 'storefront_product_search' ) ) {
 	 */
 	function storefront_product_search() {
 		if ( storefront_is_woocommerce_activated() ) { ?>
-			<div class="site-search">
+<!--			<div class="site-search">-->
 				<?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
-			</div>
+<!--			</div>-->
 		<?php
 		}
 	}
@@ -106,20 +111,26 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 	 */
 	function storefront_header_cart() {
 		if ( storefront_is_woocommerce_activated() ) {
-			if ( is_cart() ) {
-				$class = 'current-menu-item';
-			} else {
-				$class = '';
-			}
+//			if ( is_cart() ) {
+//				$class = 'current-menu-item';
+//			} else {
+//				$class = '';
+//			}
 		?>
-		<ul id="site-header-cart" class="site-header-cart menu">
-			<li class="<?php echo esc_attr( $class ); ?>">
+<!--		<ul id="site-header-cart" class="site-header-cart menu">-->
+        <div id="site-header-cart" class="header-mini-cart  pull-right">
+<!--			<li class="--><?php //echo esc_attr( $class ); ?><!--">-->
 				<?php storefront_cart_link(); ?>
-			</li>
-			<li>
-				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-			</li>
-		</ul>
+<!--			</li>-->
+<!--			<li>-->
+            <div class="dropdown-menu shopping-cart-content pull-right">
+                <div class="shopping-cart-items">
+				    <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+                </div>
+            </div>
+<!--			</li>-->
+<!--		</ul>-->
+        </div>
 		<?php
 		}
 	}
