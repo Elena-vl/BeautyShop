@@ -20,4 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<section>
+    <div class="second-page-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="header-for-light">
+                        <h1 class="wow fadeInRight animated" data-wow-duration="1s"><span><?php woocommerce_page_title(); ?></span></h1>
+                    </div>
+                    <ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

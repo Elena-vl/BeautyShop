@@ -1063,7 +1063,22 @@ if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
 	 * Show the product title in the product loop. By default this is an H2.
 	 */
 	function woocommerce_template_loop_product_title() {
-		echo '<h2 class="woocommerce-loop-product__title">' . get_the_title() . '</h2>';
+//		echo '<h2 class="woocommerce-loop-product__title">' . get_the_title() . '</h2>';
+        global $product;
+
+        $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+
+        ?>
+        <div class="product-caption">
+            <div class="block-name">
+                <a href="' . <?=esc_url( $link )?> . '" class="product-name"><?=get_the_title()?></a>
+                <?php wc_get_template( 'loop/price.php' );?>
+            </div>
+            <div class="product-cart">
+                <?php woocommerce_template_loop_add_to_cart();?>
+            </div>
+        </div>
+        <?php
 	}
 }
 if ( ! function_exists( 'woocommerce_template_loop_category_title' ) ) {
