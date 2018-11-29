@@ -1,0 +1,85 @@
+2018-11-24T16:28:07+00:00 CRITICAL Uncaught Error: Class 'bootstrap_menu' not found in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php:164
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(688): require_once()
+#1 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(647): load_template('C:\\OSPanel\\doma...', true)
+#2 C:\OSPanel\domains\beauty-shop\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\OSPanel\domains\beauty-shop\wp-content\plugins\woocommerce\templates\archive-product.php(20): get_header('shop')
+#4 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\beauty-shop\index.php(17): require('C:\\OSPanel\\doma...')
+#7 {main}
+  thrown в C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php на строке 164
+
+2018-11-24T16:29:33+00:00 CRITICAL Uncaught Error: Class 'bootstrap_menu' not found in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php:164
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(688): require_once()
+#1 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(647): load_template('C:\\OSPanel\\doma...', true)
+#2 C:\OSPanel\domains\beauty-shop\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\OSPanel\domains\beauty-shop\wp-content\plugins\woocommerce\templates\archive-product.php(20): get_header('shop')
+#4 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\beauty-shop\index.php(17): require('C:\\OSPanel\\doma...')
+#7 {main}
+  thrown в C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php на строке 164
+
+2018-11-24T16:29:36+00:00 CRITICAL Uncaught Error: Class 'bootstrap_menu' not found in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php:164
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(688): require_once()
+#1 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(647): load_template('C:\\OSPanel\\doma...', true)
+#2 C:\OSPanel\domains\beauty-shop\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\OSPanel\domains\beauty-shop\wp-content\plugins\woocommerce\templates\archive-product.php(20): get_header('shop')
+#4 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\beauty-shop\index.php(17): require('C:\\OSPanel\\doma...')
+#7 {main}
+  thrown в C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php на строке 164
+
+2018-11-24T16:47:11+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_is_woocommerce_activated() in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\404.php:27
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include()
+#1 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\beauty-shop\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown в C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\404.php на строке 27
+
+2018-11-24T16:47:11+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_is_woocommerce_activated() in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\404.php:27
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include()
+#1 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\beauty-shop\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown в C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\404.php на строке 27
+
+2018-11-24T16:56:05+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function add_action(), 1 passed in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php on line 91 and at least 2 expected in C:\OSPanel\domains\beauty-shop\wp-includes\plugin.php:398
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php(91): add_action('storefront_prod...')
+#1 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(688): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(647): load_template('C:\\OSPanel\\doma...', true)
+#3 C:\OSPanel\domains\beauty-shop\wp-includes\general-template.php(41): locate_template(Array, true)
+#4 C:\OSPanel\domains\beauty-shop\wp-content\plugins\woocommerce\templates\archive-product.php(20): get_header('shop')
+#5 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\doma в C:\OSPanel\domains\beauty-shop\wp-includes\plugin.php на строке 398
+
+2018-11-24T16:56:06+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function add_action(), 1 passed in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php on line 91 and at least 2 expected in C:\OSPanel\domains\beauty-shop\wp-includes\plugin.php:398
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php(91): add_action('storefront_prod...')
+#1 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(688): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(647): load_template('C:\\OSPanel\\doma...', true)
+#3 C:\OSPanel\domains\beauty-shop\wp-includes\general-template.php(41): locate_template(Array, true)
+#4 C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\404.php(8): get_header()
+#5 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\beauty-shop\index.php(17):  в C:\OSPanel\domains\beauty-shop\wp-includes\plugin.php на строке 398
+
+2018-11-24T16:56:07+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function add_action(), 1 passed in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php on line 91 and at least 2 expected in C:\OSPanel\domains\beauty-shop\wp-includes\plugin.php:398
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php(91): add_action('storefront_prod...')
+#1 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(688): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(647): load_template('C:\\OSPanel\\doma...', true)
+#3 C:\OSPanel\domains\beauty-shop\wp-includes\general-template.php(41): locate_template(Array, true)
+#4 C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\404.php(8): get_header()
+#5 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\beauty-shop\index.php(17):  в C:\OSPanel\domains\beauty-shop\wp-includes\plugin.php на строке 398
+

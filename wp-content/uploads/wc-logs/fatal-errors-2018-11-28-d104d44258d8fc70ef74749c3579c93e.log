@@ -1,0 +1,12 @@
+2018-11-28T22:50:21+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_product_search() in C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php:94
+Stack trace:
+#0 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(688): require_once()
+#1 C:\OSPanel\domains\beauty-shop\wp-includes\template.php(647): load_template('C:\\OSPanel\\doma...', true)
+#2 C:\OSPanel\domains\beauty-shop\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\page.php(13): get_header()
+#4 C:\OSPanel\domains\beauty-shop\wp-includes\template-loader.php(74): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\beauty-shop\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\beauty-shop\index.php(17): require('C:\\OSPanel\\doma...')
+#7 {main}
+  thrown в C:\OSPanel\domains\beauty-shop\wp-content\themes\beautyshop\header.php на строке 94
+
