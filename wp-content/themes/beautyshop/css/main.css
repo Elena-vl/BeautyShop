@@ -849,6 +849,7 @@ Product style
 /*========== for light background ============*/
 
 .product.light {
+    height: 450px !important;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -1096,7 +1097,7 @@ Product style
     position: relative}
 .figure-hover-overlay {
     position: relative;
-    height: 253px;
+    height: 300px !important;
     overflow: hidden}
 .figure-hover-overlay .figure-href {
     text-transform: lowercase;

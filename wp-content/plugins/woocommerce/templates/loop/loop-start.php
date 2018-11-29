@@ -95,31 +95,17 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     <article class="product light">
                                         <figure class="figure-hover-overlay">
                                             <a href="#"	class="figure-href"></a>
-                                            <!-- <div class="product-new">new</div>
-                                            <div class="product-sale">7% <br> off</div> -->
-                                            <!-- <a href="#" class="product-compare"><i class="fa fa-random"></i></a>
-                                            <a href="#" class="product-wishlist"><i class="fa fa-heart-o"></i></a> -->
                                             <?php
                                             $post_thumbnail_id = $product->get_image_id();
                                             $thumbnail_size = apply_filters( 'woocommerce_gallery_thumbnail_size', array( $gallery_thumbnail['width'], $gallery_thumbnail['height'] ) );
                                             $thumbnail_src = wp_get_attachment_image_src( $post_thumbnail_id, 'full');
 //                                            echo '<img src="' . esc_url( $thumbnail_src[0] ) . '" class="img-overlay img-responsive" alt="" />';
                                             echo '<img src="' . esc_url( $thumbnail_src[0] ) . '" class="img-responsive" alt="" />';
-                                            // $post_thumbnail_id = $product->get_image_id();
-                                            // $thumbnail_size = apply_filters( 'woocommerce_gallery_thumbnail_size', array( $gallery_thumbnail['width'], $gallery_thumbnail['height'] ) );
-                                            // $thumbnail_src = wp_get_attachment_image_src( $post_thumbnail_id, $thumbnail_size);
-
-                                            // echo '<img src="' . esc_url( $thumbnail_src[0] ) . '" class="img-overlay img-responsive" alt="" />';
-                                            // echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
-                                            // $html='<img src="http://placehold.it/400x500" class="img-responsive" alt="" />';
-                                            // echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
                                             ?>
-                                            <!-- <img src="http://placehold.it/400x500" class="img-overlay img-responsive" alt=""> -->
-                                            <!-- <img src="http://placehold.it/400x500" class="img-responsive" alt=""> -->
                                         </figure>
                                         <div class="product-caption">
                                             <div class="block-name">
-                                                <a href="<?php echo get_the_permalink(); ?>" class="product-name"><?php echo $product->name; ?></a>
+                                                <a href="<?php echo get_the_permalink(); ?>" title="<?=$product->name?>" class="product-name"><?php echo wp_trim_words($product->name,5); ?></a>
                                                 <?php
                                                 if (empty($product->sale_price))
                                                     echo '<p class="product-price">₽'. $product->regular_price .'</p>';
@@ -146,37 +132,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 </div>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>
-                            <!-- <div class="col-xs-12 col-sm-6 col-md-4 text-center mb-25">
-                                <article class="product light">
-                                    <figure class="figure-hover-overlay">
-                                        <a href="#"	class="figure-href"></a>
-                                        <div class="product-new">new</div>
-                                        <div class="product-sale">7% <br> off</div>
-                                        <a href="#" class="product-compare"><i class="fa fa-random"></i></a>
-                                        <a href="#" class="product-wishlist"><i class="fa fa-heart-o"></i></a>
-                                        <img src="http://placehold.it/400x500" class="img-overlay img-responsive" alt="">
-                                        <img src="http://placehold.it/400x500" class="img-responsive" alt="">
-                                    </figure>
-                                    <div class="product-caption">
-                                        <div class="block-name">
-                                            <a href="#" class="product-name">Product name</a>
-                                            <p class="product-price"><span>$330</span> $320.99</p>
-
-                                        </div>
-                                        <div class="product-cart">
-                                            <a href="#"><i class="fa fa-shopping-cart"></i> </a>
-                                        </div>
-                                        <div class="product-rating">
-                                            <div class="stars">
-                                                <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-                                            </div>
-                                            <a href="" class="review">8 Reviews</a>
-                                        </div>
-                                        <p class="description">Lorem ipsum dolor sit amet, con sec tetur adipisicing elit, sed do eiusmod</p>
-                                    </div>
-                                </article>
-                            </div> -->
-
                         </div>
 
                     </div>
@@ -236,71 +191,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                             }
                             ?>
                         </div>
-                        <div class="product light last-sale">
-                            <!-- 						<figure class="figure-hover-overlay">
-                                                        <a href="#"	class="figure-href"></a>
-                                                        <div class="product-sale">Save <br> 7%</div>
-                                                        <div class="product-sale-time"><p class="time"></p></div>
-                                                        <a href="#" class="product-compare"><i class="fa fa-random"></i></a>
-                                                        <a href="#" class="product-wishlist"><i class="fa fa-heart-o"></i></a>
-                                                        <img src="http://placehold.it/400x500" class="img-overlay img-responsive" alt="">
-                                                        <img src="http://placehold.it/400x500" class="img-responsive" alt="">
-                                                    </figure>
-                                                    <div class="product-caption">
-                                                        <div class="block-name">
-                                                            <a href="#" class="product-name">Product name</a>
-                                                            <p class="product-price"><span>$330</span> $320.99</p>
-
-                                                        </div>
-                                                        <div class="product-cart">
-                                                            <a href="#"><i class="fa fa-shopping-cart"></i> </a>
-                                                        </div>
-                                                    </div> -->
+                        <div class="widget-title">
+                            <i class="fa fa-thumbs-up"></i> Лучшая цена
+                        </div>
+                        <div class="widget-block">
                             <figure class="figure-hover-overlay">
-                                <!-- <a href="#"	class="figure-href"></a> -->
-                                <!-- <div class="product-sale-time"><p class="time"></p></div> -->
-                                <!-- <a href="#" class="product-wishlist"><i class="fa fa-heart-o"></i></a> -->
                                 <?php the_widget( 'berocket_products_of_day_widget'); ?>
                             </figure>
                         </div>
-                        <!-- <div class="widget-title">
-                            <i class="fa fa-money"></i> Price range
 
-                        </div>
-                        <div class="widget-block">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">$</span>
-                                        <input type="text" id="price-from" class="form-control" value="0">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">$</span>
-                                        <input type="text" id="price-to" class="form-control" value="500">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="widget-title">
-                            <i class="fa fa-dashboard"></i> Colors
-
-                        </div>
-                        <div class="widget-block">
-                            <ul class="colors clearfix list-unstyled">
-                                <li><a href="" rel="003d71"></a></li>
-                                <li><a href="" rel="c42c39"></a></li>
-                                <li><a href="" rel="f4bc08"></a></li>
-                                <li><a href="" rel="02882c"></a></li>
-                                <li><a href="" rel="000000"></a></li>
-                                <li><a href="" rel="caccce"></a></li>
-                                <li><a href="" rel="ffffff"></a></li>
-                                <li><a href="" rel="f9e7b6"></a></li>
-                                <li><a href="" rel="ef8a07"></a></li>
-                                <li><a href="" rel="5a433f"></a></li>
-                            </ul>
-                        </div> -->
                         <div class="widget-title">
                             <i class="fa fa-thumbs-up"></i> Бестселлеры
                         </div>
@@ -357,27 +256,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <?php }; ?>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
-                        <!-- 					<div class="widget-block">
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-2 col-xs-3">
-                                                        <img class="img-responsive" src="http://placehold.it/400x500.jpg" alt="" title="">
-                                                    </div>
-                                                    <div class="col-md-8	col-sm-10 col-xs-9">
-                                                        <div class="block-name">
-                                                            <a href="#" class="product-name">Product name</a>
-                                                            <p class="product-price"><span>$330</span> $320.99</p>
-
-                                                        </div>
-                                                        <div class="product-rating">
-                                                            <div class="stars">
-                                                                <span class="star active"></span><span class="star active"></span><span class="star active"></span><span class="star active"></span><span class="star active"></span>
-                                                            </div>
-                                                            <a href="" class="review hidden-md">8 Reviews</a>
-                                                        </div>
-                                                        <p class="description">Lorem ipsum dolor sit amet, con sec tetur adipisicing elit.</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
                     </aside>
 
                 </div>
