@@ -89,7 +89,7 @@ get_header(); ?>
                                      data-endeasing="Power4.easeIn"
                                      data-captionhidden="on"
                                      style="z-index: 2">
-                                    <a href="#" class="btn-home">Каталог</a>
+<!--                                    <a href="#" class="btn-home">Каталог</a>-->
                                 </div>
                                 <div class="tp-caption customin customout hidden-xs"
                                      data-x="145"
@@ -103,7 +103,7 @@ get_header(); ?>
                                      data-endeasing="Power4.easeIn"
                                      data-captionhidden="on"
                                      style="z-index: 2">
-                                    <a href="#" class="btn-home">О магазине</a>
+<!--                                    <a href="#" class="btn-home">О магазине</a>-->
                                 </div>
                             </li>
                             <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
