@@ -99,7 +99,7 @@ get_header(); ?>
                                      data-speed="500"
                                      data-start="1200"
                                      data-easing="Power4.easeOut"
-                                     data-endspeed="500"
+                               а      data-endspeed="500"
                                      data-endeasing="Power4.easeIn"
                                      data-captionhidden="on"
                                      style="z-index: 2">
@@ -238,7 +238,7 @@ get_header(); ?>
 
                                 <article class="product light last-sale">
                                     <figure class="figure-hover-overlay">
-<!--                                        --><?php //the_widget( 'berocket_products_of_day_widget'); ?>
+                                        <?php the_widget( 'berocket_products_of_day_widget'); ?>
                                     </figure>
                                 </article>
 
@@ -300,7 +300,7 @@ get_header(); ?>
                                     <i class="fa fa-comments"></i> Последние новости
                                 </div>
                                 <?php
-                                if (have_posts() ) : query_posts('cat=3');
+                                if (have_posts() ) : query_posts('cat=68');
                                     while (have_posts()) : the_post();
                                         ?>
                                         <div class="widget-block">
@@ -347,9 +347,6 @@ get_header(); ?>
 
                                                 $args	 = array(
                                                     'post_type'		 => 'product',
-                                                    // 'posts_per_page' => 3,
-                                                    // 'product_cat'	 => $term_slug,
-
                                                     'tax_query'		 => array(
                                                         array(
                                                             'taxonomy'	 => 'product_visibility',
@@ -363,9 +360,12 @@ get_header(); ?>
 
                                                 while ( $loop->have_posts() ) : $loop->the_post();
                                                     global $product;
+
                                                     //новинки
-                                                    if( has_term(21 , 'product_tag') ){
-                                                        ?>
+//                                                    if (has_tag( 62, $product->get_id()))
+                                                        if( has_term(62 , 'product_tag') )
+                                                    {
+                                                    ?>
 
                                                         <div class="text-center">
                                                             <div class="product light">
@@ -381,6 +381,7 @@ get_header(); ?>
                                                                 <div class="product-caption">
                                                                     <div class="block-name">
                                                                         <a href="<?php echo get_the_permalink(); ?>" class="product-name"><?php echo $product->name; ?></a>
+                                                                        <span><?php echo wc_get_product_tag_list( $product->get_id(), ', ', '' . _n( '', '', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '' ); ?></span>
                                                                         <?php
                                                                         if (empty($product->sale_price))
                                                                             echo '<p class="product-price">₽'. $product->regular_price .'</p>';
@@ -422,7 +423,7 @@ get_header(); ?>
                                                 while ( $loop->have_posts() ) : $loop->the_post();
                                                     global $product;
                                                     //избранные
-                                                    if( has_term(42 , 'product_tag') ){
+                                                    if( has_term(57 , 'product_tag') ){
                                                         ?>
                                                         <div class="text-center">
                                                             <div class="product light">

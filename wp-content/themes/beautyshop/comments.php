@@ -22,22 +22,18 @@ if ( post_password_required() ) {
 
 	<?php
 	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'storefront' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			?>
-		</h2>
+        <div class="header-for-light">
+            <h4 class="wow fadeInRight animated" data-wow-duration="1s">Clients <span>comments</span></h4>
+        </div>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e( 'Comment Navigation Above', 'storefront' ); ?>">
-			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'storefront' ); ?></span>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+            // Are there comments to navigate through. ?>
+<!--		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="--><?php //esc_html_e( 'Comment Navigation Above', 'storefront' ); ?><!--">-->
+<!--			<span class="screen-reader-text">--><?php //esc_html_e( 'Comment navigation', 'storefront' ); ?><!--</span>-->
+<!--			<div class="nav-previous">--><?php //previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?><!--</div>-->
+<!--			<div class="nav-next">--><?php //next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?><!--</div>-->
+<!--		</nav>-->
+            <!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 
 		<ol class="comment-list">
@@ -50,13 +46,16 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e( 'Comment Navigation Below', 'storefront' ); ?>">
-			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'storefront' ); ?></span>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
-		<?php endif; // Check for comment navigation.
+<!--		--><?php //if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+            // Are there comments to navigate through. ?>
+<!--		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="--><?php //esc_html_e( 'Comment Navigation Below', 'storefront' ); ?><!--">-->
+<!--			<span class="screen-reader-text">--><?php //esc_html_e( 'Comment navigation', 'storefront' ); ?><!--</span>-->
+<!--			<div class="nav-previous">--><?php //previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?><!--</div>-->
+<!--			<div class="nav-next">--><?php //next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?><!--</div>-->
+<!--		</nav>-->
+            <!-- #comment-nav-below -->
+<!--		--><?php //endif;
+		// Check for comment navigation.
 
 	endif;
 

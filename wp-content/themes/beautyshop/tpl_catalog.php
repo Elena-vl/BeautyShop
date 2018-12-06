@@ -140,7 +140,7 @@
                         $args	 = array(
                             'post_type'		 => 'product',
                             'posts_per_page' => 2,
-                            'product_cat'	 => $term_slug,
+//                            'product_cat'	 => $term_slug,
 
                             'tax_query'		 => array(
                                 array(
@@ -154,8 +154,8 @@
                         $loop	 = new WP_Query( $args );
                         while ( $loop->have_posts() ) : $loop->the_post();
                             global $product;
-                            //новинки
-                            if( has_term(85 , 'product_tag') ){
+                            //Бестселлеры
+                            if( has_term(55 , 'product_tag') ){
                                 ?>
                                 <div class="widget-block">
                                     <div class="row">
@@ -164,7 +164,7 @@
                                             $post_thumbnail_id = $product->get_image_id();
                                             $thumbnail_size = apply_filters( 'woocommerce_gallery_thumbnail_size', array( $gallery_thumbnail['width'], $gallery_thumbnail['height'] ) );
                                             $thumbnail_src = wp_get_attachment_image_src( $post_thumbnail_id, $thumbnail_size );
-                                            $html='<img src="' . esc_url( $thumbnail_src[0] ) . '" class="img-responsive" alt="" ></img>';
+                                            $html='<img src="' . esc_url( $thumbnail_src[0] ) . '" class="img-responsive" alt="" />';
                                             echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
                                             ?>
                                         </div>

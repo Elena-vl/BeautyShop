@@ -2340,10 +2340,10 @@ Page Blogs
 
 .blog {
     background-color: #f7f7f7;
-    border: 1px solid #eaeaea;
+    /*border: 1px solid #eaeaea;*/
     max-width: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
     margin-bottom: 30px}
 .blog:hover {

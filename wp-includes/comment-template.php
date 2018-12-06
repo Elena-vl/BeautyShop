@@ -1526,7 +1526,7 @@ function comments_popup_link( $zero = false, $one = false, $more = false, $css_c
 		return;
 	}
 
-	echo '<a href="';
+	echo '<a class="btn-read" href="';
 	if ( 0 == $number ) {
 		$respond_link = get_permalink() . '#respond';
 		/**

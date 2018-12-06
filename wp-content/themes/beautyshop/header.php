@@ -153,4 +153,4 @@
 <!--        		<div class="col-full">-->
 
                 <?php
-                do_action( 'storefront_content_top' );
+//                do_action( 'storefront_content_top' );

@@ -14,7 +14,7 @@
 <!--	</div>-->
 <!-- #content -->
 
-	<?php do_action( 'storefront_before_footer' ); ?>
+<!--	--><?php //do_action( 'storefront_before_footer' ); ?>
 
 <!--	<footer id="colophon" class="site-footer" role="contentinfo">-->
 <!--		<div class="col-full">-->
@@ -33,7 +33,7 @@
         <!-- .col-full -->
 <!--	</footer>-->
 <!-- #colophon -->
-<footer id="footer-block">
+            <footer id="footer-block">
     <!-- <div class="social">
         <div class="container">
             <div class="row">
@@ -128,11 +128,12 @@
         </div>
     </div>
 </footer>
-	<?php do_action( 'storefront_after_footer' ); ?>
+<!--	--><?php //do_action( 'storefront_after_footer' ); ?>
 
-</div><!-- #page -->
+        </div>
+<!-- #page -->
 
 <?php wp_footer(); ?>
 
-</body>
+    </body>
 </html>
