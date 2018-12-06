@@ -323,12 +323,20 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 	 */
 	function storefront_page_header() {
 		?>
-		<header class="entry-header">
+        <div class="header-for-light">
+            <?php
+            storefront_post_thumbnail( 'full' );
+            the_title( '<h1 class="wow fadeInRight animated" data-wow-duration="1s">', '</h1>' );
+            ?>
+        </div>
+
+<!--		<header class="entry-header">-->
 			<?php
-			storefront_post_thumbnail( 'full' );
-			the_title( '<h1 class="entry-title">', '</h1>' );
+//			storefront_post_thumbnail( 'full' );
+//			the_title( '<h1 class="entry-title">', '</h1>' );
 			?>
-		</header><!-- .entry-header -->
+<!--		</header>-->
+        <!-- .entry-header -->
 		<?php
 	}
 }

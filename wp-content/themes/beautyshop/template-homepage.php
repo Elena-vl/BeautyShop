@@ -550,7 +550,7 @@ get_header(); ?>
                                 'orderby'	=> 'count',
                                 'order'		=> 'DESC',
                                 'hide_empty' => false,
-                                'parent'	 => 88,
+                                'parent'	 => 26,
                             );
                             $product_sub_categories = get_terms( $args );
                             $product_category_link = '';
