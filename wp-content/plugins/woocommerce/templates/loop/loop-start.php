@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!--                    <ul class="products columns---><?php //echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?><!--">-->
 <?php get_header(); // подключаем header.php ?>
     <section>
-        <div class="second-page-container" style="padding-top: 0px !important;">
+        <div class="second-page-container">
             <div class="container">
                 <div class="row">
 
@@ -151,7 +151,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 'order'		=> 'DESC',
                                 'hide_empty' => false,
                                 'parent'	 => 0,
-                                'exclude' => 17,
+                                'exclude' => array(15,26),
                             );
 
                             $product_categories = get_terms( $args );
@@ -191,15 +191,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                             }
                             ?>
                         </div>
-                        <div class="widget-title">
-                            <i class="fa fa-thumbs-up"></i> Лучшая цена
+<!--                        <div class="widget-title">-->
+<!--                            <i class="fa fa-thumbs-up"></i> Лучшая цена-->
+<!--                        </div>-->
+                        <div class="product light last-sale">
+                            <div class="widget-block">
+                                <figure class="figure-hover-overlay">
+                                    <?php the_widget( 'berocket_products_of_day_widget'); ?>
+                                </figure>
+                            </div>
                         </div>
-                        <div class="widget-block">
-                            <figure class="figure-hover-overlay">
-                                <?php the_widget( 'berocket_products_of_day_widget'); ?>
-                            </figure>
-                        </div>
-
                         <div class="widget-title">
                             <i class="fa fa-thumbs-up"></i> Бестселлеры
                         </div>

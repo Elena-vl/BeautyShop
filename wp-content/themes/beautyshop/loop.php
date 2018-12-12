@@ -12,21 +12,21 @@ do_action( 'storefront_loop_before' );
 
 ?>
     <section>
-        <div class="second-page-container color-scheme-white-90">
+        <div class="second-page-container">
 
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                        <div class="block-breadcrumb">
-                            <ul class="breadcrumb">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li class="active">Blog items</li>
-                            </ul>
-                        </div>
+<!--                        <div class="block-breadcrumb">-->
+<!--                            <ul class="breadcrumb">-->
+<!--                                <li><a href="#">Home</a></li>-->
+<!--                                <li><a href="#">Pages</a></li>-->
+<!--                                <li class="active">Blog items</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
                         <div class="block">
                             <div class="header-for-light">
-                                <h1 class="wow fadeInRight animated" data-wow-duration="1s"><span>Blog</span></h1>
+                                <h1 class="wow fadeInRight animated" data-wow-duration="1s"><span>Блог</span></h1>
                             </div>
                             <div class="row">
                                 <?php
@@ -67,7 +67,7 @@ do_action( 'storefront_loop_before' );
                                         'order'		=> 'DESC',
                                         'hide_empty' => false,
                                         'parent'	 => 0,
-                                        'exclude' => array(17,88),
+                                        'exclude' => array(15,26),
                                     );
 
                                     $product_categories = get_terms( $args );

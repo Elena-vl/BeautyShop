@@ -193,7 +193,7 @@ get_header(); ?>
                                                 'order'		=> 'DESC',
                                                 'hide_empty' => false,
                                                 'parent'	 => 0,
-                                                'exclude' => array(17,88),
+                                                'exclude' => array(15,26),
                                             );
 
                                             $product_categories = get_terms( $args );

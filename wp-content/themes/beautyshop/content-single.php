@@ -7,7 +7,7 @@
 
 ?>
 
-<!--<article id="post---><?php //the_ID(); ?><!--" --><?php //post_class(); ?><!-->-->
+<!--<article id="post---><?php //the_ID(); ?><!--" --><?php //post_class(); ?>
 
 	<?php
 	do_action( 'storefront_single_post_top' );
@@ -39,15 +39,17 @@
             <div class="row">
 
                 <div class="col-md-9">
-                    <div class="block-breadcrumb">
-                        <ul class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li class="active">Blog content</li>
-                        </ul>
-                    </div>
+<!--                    <div class="block-breadcrumb">-->
+<!--                        <ul class="breadcrumb">-->
+<!--                            <li><a href="#">Home</a></li>-->
+<!--                            <li><a href="#">Pages</a></li>-->
+<!--                            <li class="active">Blog content</li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
                     <div class="block-blog">
-                        <img src="<?php the_post_thumbnail_url(); ?>" alt="image" class="img-responsive">
+                        <?php if(file_exists(the_post_thumbnail_url())) {?>
+                            <img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="" title="">
+                        <?php } ?>
                         <div class="block">
                             <div class="header-for-light">
 <!--                                <h1 class="wow fadeInRight animated" data-wow-duration="1s">Blog <span>Content</span></h1>-->
@@ -59,7 +61,7 @@
                             </p>
                             <div class="block">
                                 <div class="header-for-light">
-                                    <h4 class="wow fadeInRight animated" data-wow-duration="1s">RELATED <span>POSTS</span></h4>
+                                    <h4 class="wow fadeInRight animated" data-wow-duration="1s">Похожие <span>записи</span></h4>
                                 </div>
 
                                 <div class="row">
@@ -138,7 +140,7 @@
                                     'order'		=> 'DESC',
                                     'hide_empty' => false,
                                     'parent'	 => 0,
-                                    'exclude' => array(17,88),
+                                    'exclude' => array(15,26),
                                 );
 
                                 $product_categories = get_terms( $args );

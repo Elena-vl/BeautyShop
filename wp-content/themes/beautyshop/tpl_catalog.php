@@ -86,7 +86,7 @@
                                 'order'		=> 'DESC',
                                 'hide_empty' => false,
                                 'parent'	 => 0,
-                                'exclude' => 17,
+                                'exclude' => array(15,26),
                             );
                             $product_categories = get_terms( $args );
                             $count = count($product_categories);
