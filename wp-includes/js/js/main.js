@@ -175,10 +175,14 @@ jQuery(document).ready(function($) {
     $("#nav-tabs2 .next").click(function() {
         $("#owl-new2").trigger('owl.next');
         $("#owl-featured2").trigger('owl.next');
+        $("#owl-new").trigger('owl.next');
+        $("#owl-featured").trigger('owl.next');
     });
     $("#nav-tabs2 .prev").click(function() {
         $("#owl-new2").trigger('owl.prev');
         $("#owl-featured2").trigger('owl.prev');
+        $("#owl-new").trigger('owl.prev');
+        $("#owl-featured").trigger('owl.prev');
     });
 
     $("#owl-new2").owlCarousel({
@@ -218,8 +222,42 @@ jQuery(document).ready(function($) {
         navigation: false
     });
 
-
-
+    $("#owl-new").owlCarousel({
+        // Most important owl features
+        items: 3,
+        itemsCustom: false,
+        itemsDesktop: [1199, 2],
+        itemsDesktopSmall: [980, 2],
+        itemsTablet: [630, 1],
+        itemsTabletSmall: false,
+        itemsMobile: [479, 1],
+        singleItem: false,
+        itemsScaleUp: false,
+        responsive: true,
+        responsiveRefreshRate: 200,
+        responsiveBaseWidth: window,
+        autoPlay: false,
+        stopOnHover: false,
+        navigation: false
+    });
+    $("#owl-featured").owlCarousel({
+        // Most important owl features
+        items: 3,
+        itemsCustom: false,
+        itemsDesktop: [1199, 2],
+        itemsDesktopSmall: [980, 2],
+        itemsTablet: [630, 1],
+        itemsTabletSmall: false,
+        itemsMobile: [479, 1],
+        singleItem: false,
+        itemsScaleUp: false,
+        responsive: true,
+        responsiveRefreshRate: 200,
+        responsiveBaseWidth: window,
+        autoPlay: false,
+        stopOnHover: false,
+        navigation: false
+    });
 
     $("#owl-partners").owlCarousel({
         // Most important owl features
