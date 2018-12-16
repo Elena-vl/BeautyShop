@@ -280,15 +280,6 @@ get_header(); ?>
                         <img src="<?php get_site_url() ?>/wp-content/uploads/img/action.jpg" class="img-responsive" alt="">
                     </div>
 
-                    <?php
-                        $posts = get_posts( array(
-                            'numberposts' => -1,
-                            'post_type'   => 'product',
-                            'include'     => array(),
-                            'exclude'     => array(),
-                            'suppress_filters' => true // подавление работы фильтров изменения SQL запроса
-                        ) );
-                    ?>
                     <div class="block-product-tab">
                         <div class="tab-bg"></div>
                         <div class="toolbar-for-light" id="nav-tabs2">
@@ -302,11 +293,27 @@ get_header(); ?>
                             <li><a href="#new2" data-toggle="tab" class="disabled">Эксклюзивные товары</a><div class="header-bottom-line"></div></li>
                             <li><a href="#featured2" data-toggle="tab" class="disabled">Хиты продаж</a><div class="header-bottom-line"></div></li>
                         </ul>
+
+                        <?php
+
+                        $posts =  get_posts(
+                            array(
+                                'numberposts' => 1000,
+                                'post_type'      => array( 'product', 'product_variation' ),
+                                'orderby' => 'ID',
+                                'order' => 'ASC',
+                                'post_status'    => 'publish'
+                            )
+                        );
+                        ?>
                         <div class="tab-content">
                             <div class="tab-pane active animated fadeIn" id="new">
                                 <div id="owl-new2"  class="owl-carousel">
-                                    <?php  foreach( $posts as $post ){
+                                    <?php
+                                    foreach( $posts as $post ){
+                                        setup_postdata($post);
                                         if(has_term('new' , 'product_tag')){ ?>
+
                                             <div class="text-center">
                                                 <div class="product light">
                                                     <figure class="figure-hover-overlay">
@@ -343,6 +350,7 @@ get_header(); ?>
                             <div class="tab-pane animated fadeIn" id="featured">
                                 <div id="owl-featured2"  class="owl-carousel">
                                     <?php  foreach( $posts as $post ){
+                                        setup_postdata($post);
                                         if(has_term('chosens' , 'product_tag')){ ?>
                                             <div class="text-center">
                                                 <div class="product light">
@@ -380,6 +388,7 @@ get_header(); ?>
                             <div class="tab-pane animated fadeIn" id="new2">
                                 <div id="owl-new"  class="owl-carousel">
                                     <?php  foreach( $posts as $post ){
+                                        setup_postdata($post);
                                         if(has_term('exclusive' , 'product_tag')){ ?>
                                             <div class="text-center">
                                                 <div class="product light">
@@ -417,6 +426,7 @@ get_header(); ?>
                             <div class="tab-pane animated fadeIn" id="featured2">
                                 <div id="owl-featured"  class="owl-carousel">
                                     <?php  foreach( $posts as $post ){
+                                        setup_postdata($post);
                                         if(has_term('hit' , 'product_tag')){ ?>
                                             <div class="text-center">
                                                 <div class="product light">
@@ -450,21 +460,23 @@ get_header(); ?>
                                     } ?>
                                 </div>
                             </div>
+
+                            <?php wp_reset_postdata(); ?>
                         </div>
 
                     </div>
 
                     <!-- Отзывы покупателей -->
-                    <div class="block">
-                        <div class="header-for-light">
-                            <h4 class="wow fadeInRight animated" data-wow-duration="1s">Отзывы <span>покупателей</span></h4>
-                        </div>
-                        <ul class="media-list list-unstyled">
-                            <?php
-                            comments_template('', true);
-                            ?>
-                        </ul>
-                    </div>
+<!--                    <div class="block">-->
+<!--                        <div class="header-for-light">-->
+<!--                            <h4 class="wow fadeInRight animated" data-wow-duration="1s">Отзывы <span>покупателей</span></h4>-->
+<!--                        </div>-->
+<!--                        <ul class="media-list list-unstyled">-->
+<!--                            --><?php
+//                            comments_template('', true);
+//                            ?>
+<!--                        </ul>-->
+<!--                    </div>-->
                 </aside>
             </div>
         </div>
